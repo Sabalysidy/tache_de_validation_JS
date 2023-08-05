@@ -1,0 +1,28 @@
+.container {
+    padding: 20px;
+}
+
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.total {
+    margin-top: 20px;
+    text-align: end;
+}
+
+@media (max-width: 767px) {
+    .header {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 12px;
+    }
+
+    .total {
+        text-align: center;
+    }
+}

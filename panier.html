@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD avec LocalStorage</title>
+    <title>Panier</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="panier.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- ============ CDN ========== -->
@@ -23,39 +24,30 @@
         </div>
     </div>
 
-    <!-- =========== CRUD SYSTEM =========== -->
-
+    <!-- ============ Contenu du panier ============ -->
     <div class="container">
-        <div col-md-6>
-            <h2 class="text-center fs-2 text-secondary">Ajouter un produit</h2>
-            <form id="addProductForm">
-                <input type="text" id="name" placeholder="Nom du produit" required>
-                <input type="number" id="price" placeholder="Prix" required>
-                <input type="text" id="description" placeholder="Description" required>
-                <input type="file" id="image" accept="image/*" required>
-                <button type="submit">Ajouter</button>
-                <button type="button" id="updateButton" style="display: none;">Mettre à jour</button>
-            </form>
-        </div>
-
-        <h2 class="text-center fs-2 text-secondary">Liste des produits</h2>
-        <div class="table-responsive">
+        <h2 class="text-center fs-2 text-secondary">Panier</h2>
+        <div class="cart-items">
             <table class="table">
                 <thead>
                     <tr>
-                        <th class="bg-info text-white">Images</th>
-                        <th class="bg-info text-white">Noms</th>
+                        <th class="bg-info text-white">Image</th>
+                        <th class="bg-info text-white">Nom</th>
                         <th class="bg-info text-white">Prix</th>
-                        <th class="bg-info text-white">Descriptions</th>
-                        <th class="bg-info text-white">Actions</th>
+                        <th class="bg-info text-white">Action</th>
                     </tr>
                 </thead>
-                <tbody id="productList"></tbody>
+                <tbody id="cartItemList"></tbody>
             </table>
+        </div>
+        <div class="total">
+            <h3 class="text-end">Total: <span id="totalAmount">0.00 €</span></h3>
+            <button class="btn btn-success" id="commandButton">Commander Maintenant</button>
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="panier.js"></script>
+
 
 </body>
 

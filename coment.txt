@@ -1,0 +1,68 @@
+    <!-- <div class="content">
+        <div id="root"></div>
+        <div class="sidebar">
+            <div class="head">
+                <p>My Cart</p>
+            </div>
+            <div id="cartItem">Your cart is empty</div>
+            <div class="foot">
+                <h3>Total</h3>
+                <h2 id="total">$ 0.00</h2>
+            </div>
+        </div>
+    </div> -->
+    /* .content {
+        display: flex;
+        width: 70%;
+        margin-bottom: 30px;
+      }
+      
+      #root {
+        width: 5%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+      
+      .sidebar {
+        width: 40%;
+        border-radius: 5px;
+        background-color: #EEE;
+        margin-left: 60%;
+        padding: 15px;
+        text-align: center;
+      }
+      
+      .head {
+        background-color: goldenrod;
+        border-radius: 3px;
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+      
+      .foot {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0px;
+        padding: 10px 0;
+        border-top: 1px solid #000;
+      } */
+      
+      /* h1, h2 {
+          text-align: center;
+        } */
+      
+      /* Médias queries pour écrans de petite taille */
+/* @media (max-width: 767px) {
+  .sidebar {
+      width: 100%;
+      position: static;
+  }
+  .root {
+      display: none;
+  }
+} */
