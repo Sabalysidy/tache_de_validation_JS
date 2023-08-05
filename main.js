@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const addProductForm = document.getElementById('addProductForm');
     const countCart = document.getElementById('countCart'); // Compteur du panier
 
-
     // Vérifier si des produits sont déjà présents en LocalStorage
     let products = JSON.parse(localStorage.getItem('products')) || [];
 
@@ -54,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const newName = prompt('Nouveau nom du produit:', products[index].name);
         const newPrice = parseFloat(prompt('Nouveau prix:', products[index].price));
         const newDescription = prompt('Nouvelle description:', products[index].description);
-        const newImage = products[index].image; // On ne permet pas de modifier l'image ici, mais vous pouvez ajouter cette fonctionnalité si nécessaire.
+        const newImage = products[index].image;
 
         if (newName && newPrice && newDescription) {
             products[index] = {

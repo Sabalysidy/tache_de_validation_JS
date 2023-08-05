@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Mettre à jour le compteur du panier
         countCart.innerText = cartItems.length.toString();
-        
         afficherTotal();
     }
 
