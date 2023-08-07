@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-
     // Ajouter un produit au panier
     window.addToCart = (index) => {
         const product = products[index];

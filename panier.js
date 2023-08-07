@@ -3,13 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartItemList = document.getElementById('cartItemList');
     const totalAmountElement = document.getElementById('totalAmount');
 
-    // Calculer et afficher le montant total de la commande
-    function afficherTotal() {
-        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        const totalAmount = cartItems.reduce((total, item) => total + item.price, 0);
-        totalAmountElement.textContent = totalAmount.toFixed(2) + " €";
-    }
-
     // Charger les éléments du panier depuis le stockage local et les afficher dans le tableau
     function afficherArticlesPanier() {
         cartItemList.innerHTML = '';
@@ -31,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Mettre à jour le compteur du panier
         countCart.innerText = cartItems.length.toString();
         afficherTotal();
+    }
+
+    // Calculer et afficher le montant total de la commande
+    function afficherTotal() {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const totalAmount = cartItems.reduce((total, item) => total + item.price, 0);
+        totalAmountElement.textContent = totalAmount.toFixed(2) + " €";
     }
 
     // Supprimer un élément du panier
