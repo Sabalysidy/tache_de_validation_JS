@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const productList = document.getElementById('productList');
     const addProductForm = document.getElementById('addProductForm');
-    const countCart = document.getElementById('countCart'); // Compteur du panier
+    const countCart = document.getElementById('countCart');
 
     // Vérifier si des produits sont déjà présents en LocalStorage
     let products = JSON.parse(localStorage.getItem('products')) || [];
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    countCart.innerText = cartItems.length.toString();
 
     // Ajouter un produit
     addProductForm.addEventListener('submit', (e) => {
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             price,
             description,
             image,
-        };
+        }; 
 
         products.push(newProduct);
         localStorage.setItem('products', JSON.stringify(products));

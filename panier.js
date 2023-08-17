@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const countCart = document.getElementById('countCart'); // Compteur du panier
+    const countCart = document.getElementById('countCart');
     const cartItemList = document.getElementById('cartItemList');
     const totalAmountElement = document.getElementById('totalAmount');
 
